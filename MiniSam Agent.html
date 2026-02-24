@@ -18,12 +18,12 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #f2f7ff; /* fresh light background */
+      background: #f2f7ff;
       color: #15273f;
       line-height: 1.5;
     }
 
-    /* ---------- navigation (clean, with name) ---------- */
+    /* navigation */
     .navbar {
       display: flex;
       align-items: center;
@@ -93,7 +93,7 @@
       font-size: 1.3rem;
     }
 
-    /* ---------- hero (AI robot representation) ---------- */
+    /* hero */
     .hero-banner {
       max-width: 1300px;
       margin: 1.5rem auto 2rem;
@@ -156,14 +156,14 @@
       box-shadow: 0 0 0 3px #7d9fe0;
     }
 
-    /* ---------- container ---------- */
+    /* container */
     .container {
       max-width: 1300px;
       margin: 0 auto 3rem;
       padding: 0 2rem;
     }
 
-    /* each step card (no step missed) */
+    /* step cards */
     .step-card {
       background: #ffffff;
       border-radius: 34px;
@@ -214,7 +214,7 @@
       border-radius: 18px;
     }
 
-    /* code blocks */
+    /* code boxes */
     .code-box {
       background: #0f1d31;
       border-radius: 24px;
@@ -265,7 +265,7 @@
       margin-top: 0.8rem;
     }
 
-    /* feature strip */
+    /* agent strip */
     .agent-strip {
       display: flex;
       flex-wrap: wrap;
@@ -283,7 +283,7 @@
       box-shadow: 0 5px 10px #b1cbf2;
     }
 
-    /* full json card (included) */
+    /* full json card */
     .full-json-card {
       background: #eef5fe;
       border-radius: 40px;
@@ -365,6 +365,9 @@
     <a href="#step5">step 5</a>
     <a href="#step6">step 6</a>
     <a href="#step7">step 7</a>
+    <a href="#step8">step 8</a>
+    <a href="#step9">step 9</a>
+    <a href="#step10">step 10</a>
     <a href="#fulljson">full JSON</a>
   </div>
   <div class="author-chip">
@@ -372,12 +375,12 @@
   </div>
 </nav>
 
-<!-- hero with AI robot image (sam) -->
+<!-- hero with AI robot image -->
 <div class="hero-banner">
   <div class="hero-text">
     <h1>MiniSam <br>autonomous AI</h1>
-    <div class="hero-tagline"><i class="fas fa-bolt"></i> step‑by‑step setup · no shortcuts</div>
-    <p style="font-size:1.2rem; color:#1d3d64;">cryptography · FPGA · 5 expert agents · WhatsApp native</p>
+    <div class="hero-tagline"><i class="fas fa-bolt"></i> complete 10‑step setup · reportlab included</div>
+    <p style="font-size:1.2rem; color:#1d3d64;">cryptography · FPGA · 5 expert agents · WhatsApp native · PDF export</p>
   </div>
   <div class="hero-robot">
     <div class="robot-face">
@@ -391,7 +394,7 @@
 
 <div class="container">
 
-  <!-- STEP 1 – directory + update (full) -->
+  <!-- STEP 1 – directory + update -->
   <div class="step-card" id="step1">
     <div class="step-header">
       <span class="step-number">1</span>
@@ -412,21 +415,34 @@ sudo apt update</pre>
     <div class="step-header">
       <span class="step-number">2</span>
       <i class="fab fa-python"></i>
-      <h2>Install python3.12 venv & create environment</h2>
+      <h2>Install python3.12 venv</h2>
     </div>
     <div class="code-box">
       <button class="copy-btn" onclick="copyCode(this)"><i class="far fa-copy"></i> copy</button>
-      <pre>sudo apt install python3.12-venv -y
-python3 -m venv venv</pre>
+      <pre>sudo apt install python3.12-venv -y</pre>
     </div>
-    <div class="step-desc">virtual environment 'venv' created</div>
+    <div class="step-desc">virtual environment support installed</div>
   </div>
 
-  <!-- STEP 3 – activate venv -->
+  <!-- STEP 3 – create venv -->
   <div class="step-card" id="step3">
     <div class="step-header">
       <span class="step-number">3</span>
       <i class="fas fa-terminal"></i>
+      <h2>Create virtual environment</h2>
+    </div>
+    <div class="code-box">
+      <button class="copy-btn" onclick="copyCode(this)"><i class="far fa-copy"></i> copy</button>
+      <pre>python3 -m venv venv</pre>
+    </div>
+    <div class="step-desc">virtual environment 'venv' created</div>
+  </div>
+
+  <!-- STEP 4 – activate venv -->
+  <div class="step-card" id="step4">
+    <div class="step-header">
+      <span class="step-number">4</span>
+      <i class="fas fa-play"></i>
       <h2>Activate virtual environment</h2>
     </div>
     <div class="code-box">
@@ -436,10 +452,10 @@ python3 -m venv venv</pre>
     <div class="step-desc">you should see (venv) in prompt</div>
   </div>
 
-  <!-- STEP 4 – install nvm & node -->
-  <div class="step-card" id="step4">
+  <!-- STEP 5 – install nvm & node -->
+  <div class="step-card" id="step5">
     <div class="step-header">
-      <span class="step-number">4</span>
+      <span class="step-number">5</span>
       <i class="fab fa-node"></i>
       <h2>Install nvm & Node.js 20</h2>
     </div>
@@ -453,10 +469,10 @@ nvm use 20</pre>
     <div class="step-desc">Node 20 activated</div>
   </div>
 
-  <!-- STEP 5 – pip install nanobot-ai -->
-  <div class="step-card" id="step5">
+  <!-- STEP 6 – pip install nanobot-ai -->
+  <div class="step-card" id="step6">
     <div class="step-header">
-      <span class="step-number">5</span>
+      <span class="step-number">6</span>
       <i class="fas fa-robot"></i>
       <h2>Install nanobot‑ai</h2>
     </div>
@@ -467,10 +483,10 @@ nvm use 20</pre>
     <div class="step-desc">AI agent framework installed</div>
   </div>
 
-  <!-- STEP 6 – create .nanobot folder -->
-  <div class="step-card" id="step6">
+  <!-- STEP 7 – create .nanobot folder -->
+  <div class="step-card" id="step7">
     <div class="step-header">
-      <span class="step-number">6</span>
+      <span class="step-number">7</span>
       <i class="fas fa-folder"></i>
       <h2>Create config directory</h2>
     </div>
@@ -481,10 +497,24 @@ nvm use 20</pre>
     <div class="step-desc">~/.nanobot ready for config</div>
   </div>
 
-  <!-- STEP 7 – full config.json (exactly as requested) -->
+  <!-- STEP 8 – install reportlab (the missing step) -->
+  <div class="step-card" id="step8">
+    <div class="step-header">
+      <span class="step-number">8</span>
+      <i class="fas fa-file-pdf"></i>
+      <h2>Install reportlab (PDF generation)</h2>
+    </div>
+    <div class="code-box">
+      <button class="copy-btn" onclick="copyCode(this)"><i class="far fa-copy"></i> copy</button>
+      <pre>pip install reportlab</pre>
+    </div>
+    <div class="step-desc">PDF export for research reports, IEEE templates</div>
+  </div>
+
+  <!-- STEP 9 – full config.json -->
   <div class="step-card" id="fulljson">
     <div class="step-header">
-      <span class="step-number">7</span>
+      <span class="step-number">9</span>
       <i class="fas fa-file-code"></i>
       <h2>Create advanced config.json</h2>
     </div>
@@ -572,10 +602,10 @@ nvm use 20</pre>
     <span class="agent-pill"><i class="fas fa-feather"></i> creative (claude-3-haiku)</span>
   </div>
 
-  <!-- extra step: WhatsApp login (8) and gateway (9) – still part of full steps -->
-  <div class="step-card" id="step8">
+  <!-- STEP 10 – WhatsApp login -->
+  <div class="step-card" id="step10">
     <div class="step-header">
-      <span class="step-number">8</span>
+      <span class="step-number">10</span>
       <i class="fab fa-whatsapp"></i>
       <h2>WhatsApp login (QR code)</h2>
     </div>
@@ -586,9 +616,10 @@ nvm use 20</pre>
     <div class="step-desc">Scan QR from WhatsApp → Linked Devices → Link Device</div>
   </div>
 
-  <div class="step-card" id="step9">
+  <!-- STEP 11 – gateway launch -->
+  <div class="step-card" id="step11">
     <div class="step-header">
-      <span class="step-number">9</span>
+      <span class="step-number">11</span>
       <i class="fas fa-play-circle"></i>
       <h2>Launch autonomous gateway</h2>
     </div>
@@ -628,11 +659,11 @@ nanobot gateway</pre>
   <div style="margin-top:1.5rem; display: flex; gap:2rem; justify-content: center; font-size:1.5rem;">
     <i class="fas fa-robot"></i> <i class="fas fa-shield-halved"></i> <i class="fas fa-wave-square"></i>
   </div>
-  <p style="margin-top:1.5rem;">MiniSam Agent — every single step included · autonomous AI architecture</p>
+  <p style="margin-top:1.5rem;">MiniSam Agent — every single step included · reportlab · autonomous AI architecture</p>
 </footer>
 
 <script>
-  // universal copy for code boxes (step by step)
+  // universal copy for code boxes
   function copyCode(btn) {
     const codeBox = btn.closest('.code-box');
     if (!codeBox) return;
@@ -648,7 +679,7 @@ nanobot gateway</pre>
     }).catch(() => alert('copy failed'));
   }
 
-  // copy full json separately
+  // copy full json
   function copyFullJson() {
     const pre = document.getElementById('fullJsonPre');
     const code = pre.innerText;
